@@ -44,9 +44,12 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-stars = ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
-for bloop in stars:
-    print(bloop)
+start = []
+for x in range(10):
+    start.append('*')
+    return: start
+
+
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
