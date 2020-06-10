@@ -9,8 +9,8 @@ linter with no errors or warnings!
 import string
 
 def getLetter(index):
-    alphabet = a_string.ascii_lowercase() + " "
-    return alphabet(index)
+    alphabet = string.ascii_lowercase() + " "
+    return alphabet[index]
 
 
 def week2exercise2():
@@ -24,5 +24,5 @@ def week2exercise2():
     return secret_word
 
 
-if __name__ = "__main__":
+if __name__: "__main__"
 print(week2exercise2())

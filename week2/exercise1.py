@@ -7,13 +7,13 @@ TODO: execute that line and write what actually happened next to it.
 See example for first print statement
 """
 
-#
 import platform
 
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
 
-some_words = ['what', 'does', 'this', 'line', 'do', '?']
+#generates ['what', 'does', 'this', 'line', 'do', '?'] as the values for variable some_words
+some_words = ['what', 'does', 'this', 'line', 'do', '?'] # it creates a list of strings (strings are texts '' "")
 
    # I think this will print "what" imported from some_words calling the print function
 for word in some_words:
@@ -24,12 +24,13 @@ for x in some_words:
     print(x) # It also prints the words in some_words individually in separate lines
 
 # I think this will print "what does this line do ?"
-print(some_words) # It printed some_words exactly by the layout it was in
+print(some_words) # It printed some_words exactly by the layout it was in; the list
 
 #I think this will print "what does this line do ? contains more than 3 words"
 if len(some_words) > 3:
-    print('some_words contains more than 3 words') # It printed some_words contains more than 3 words
+    print('some_words contains more than 3 words') # It printed some_words contains more than 3 words because it was true that some_words contained more than 3 words
 
+# defines useful functions
 def usefulFunction():
     """
     You may want to look up what uname does before you guess
@@ -40,4 +41,4 @@ def usefulFunction():
     print(platform.uname()) # Instead of not naming things, it named all the platforms used
 
 # I think this addresses the information as important
-usefulFunction() # this wasn't a code?
+usefulFunction() # tells ud information about our own devices
