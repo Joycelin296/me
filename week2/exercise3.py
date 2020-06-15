@@ -37,17 +37,19 @@ def fix_it(moves=True, should_move=True):
         return 'W4-40'
 
 
-def loops_1a():
+ def loops_1a():
     """Make 10 stars.
 
     Using a for loop
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-start = []
-for x in range(10):
-    start.append('*')
-    return: start
+
+    arr = []
+    for x in range(10):
+        arr.append('*')
+        x += 1
+        print(arr)
 
 
 
@@ -173,7 +175,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    
 
 
 def loops_7():
