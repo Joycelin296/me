@@ -33,11 +33,11 @@ def fix_it(moves=True, should_move=True):
         return 'No Problem'
     elif(moves and not should_move):
         return 'Duct Tape'
-    else:
-        return 'W4-40'
+    elif(not moves and should_move):
+        return 'WD-40'
 
 
- def loops_1a():
+def loops_1a():
     """Make 10 stars.
 
     Using a for loop
@@ -48,8 +48,7 @@ def fix_it(moves=True, should_move=True):
     arr = []
     for x in range(10):
         arr.append('*')
-        x += 1
-        print(arr)
+    return arr
 
 
 
@@ -60,7 +59,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    arr = []
+    for x in range(number_of_items):
+       arr.append(symbol)
+    return arr
 
 
 def loops_2():
@@ -81,7 +83,10 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    arr = ['*','*','*','*','*','*','*','*','*','*']
+    for x in range(10):
+        print(x)
+
 
 
 def loops_3():
@@ -105,7 +110,9 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    arr = ['*','*','*','*','*','*','*','*','*','*']
+    for x in range(10):
+        print(x)
 
 
 def loops_4():
