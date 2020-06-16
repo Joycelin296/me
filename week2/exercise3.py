@@ -142,12 +142,13 @@ def loops_4():
     """
     all_numbers = []
     row = []
-    for i in range(10):
-        all_numbers.append(str(i))
-        all_numbers.append(row)
-    return all_numbers
+    for j in range(10):
+        all_numbers.append(str(j))
+        row.append(all_numbers)
+    return row
 
 
+  
 
 def loops_5():
     """Make the coordinates of the block.
@@ -174,12 +175,13 @@ def loops_5():
     you'll come to see the pros and cons of each over time.
     """
     loop_5 = []
+    loops = []
     for i in range(10):
-        loops = []
         for j in range(5):
-            loop_5.append('(i' + str(i) + ',j' + str(j) + ')')
+            loop_5.append('(i' + str(i) + ', j' + str(j) + ')')
         loops.append(loop_5)
-    return loop_5
+        loop_5 = []
+    return loops
 
 
 def loops_6():
@@ -202,14 +204,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    all_numbers = []
+    pyramid = []
+    
     for i in range(10):
         row = []
-        for j in range (i + 1):
-            all_numbers.append(str(j))
-        all_numbers.append(row)
-    return all_numbers
-
+        for j in range(i + 1):
+            row.append(str(j))
+        pyramid.append(row)
+    return pyramid
+    
 
 def loops_7():
     """Make a pyramid.
