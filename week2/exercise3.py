@@ -141,10 +141,9 @@ def loops_4():
     ]
     """
     all_numbers = []
-    for x in range(10):
-        row = []
-        for y in range(10):
-            all_numbers.append(str(y))
+    row = []
+    for i in range(10):
+        all_numbers.append(str(i))
         all_numbers.append(row)
     return all_numbers
 
@@ -174,13 +173,13 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    loop5 = []
-    loops = []
-    for x in range(10):
-        for y in range(5):
-            loop5.append('(i' + str(x) + ',j' + str(x) + ')')
-        loops.append(loop5)
-    return loop5
+    loop_5 = []
+    for i in range(10):
+        loops = []
+        for j in range(5):
+            loop_5.append('(i' + str(i) + ',j' + str(j) + ')')
+        loops.append(loop_5)
+    return loop_5
 
 
 def loops_6():
@@ -203,6 +202,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
+    all_numbers = []
+    for i in range(10):
+        row = []
+        for j in range (i + 1):
+            all_numbers.append(str(j))
+        all_numbers.append(row)
+    return all_numbers
 
 
 def loops_7():
