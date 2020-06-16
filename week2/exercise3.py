@@ -83,9 +83,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    arr = ['*','*','*','*','*','*','*','*','*','*']
+    all_the_stars = []
     for x in range(10):
-        print(x)
+        row_of_stars = []
+        for y in range(10):
+            row_of_stars.append('*')
+        all_the_stars.append(row_of_stars)
+    return all_the_stars
 
 
 
@@ -110,9 +114,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    arr = ['*','*','*','*','*','*','*','*','*','*']
+    vertical = []
     for x in range(10):
-        print(x)
+        horizontal = []
+        for y in range(10):
+            horizontal.append(str(x))
+        vertical.append(horizontal)
+    return vertical
 
 
 def loops_4():
@@ -132,7 +140,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    all_numbers = []
+    for x in range(10):
+        row = []
+        for y in range(10):
+            all_numbers.append(str(y))
+        all_numbers.append(row)
+    return all_numbers
+
 
 
 def loops_5():
@@ -159,7 +174,7 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    
 
 
 def loops_6():
@@ -182,7 +197,6 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    
 
 
 def loops_7():
@@ -206,7 +220,21 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    pyramid = []
+    blank = 4
+    dot = 1
+    for x in range (5):
+        plane = []
+        for y in range(blank):
+            plane.append(' ')
+        for x in range(dot):
+            plane.append('*')
+        for x in range(blank):
+            plane.append(' ')
+        blank -= 1
+        dot += 2
+        pyramid.append(plane)
+    return pyramid
 
 
 def lp(some_kind_of_list, exercise_name):
