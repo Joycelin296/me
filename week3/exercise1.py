@@ -46,14 +46,17 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    number_guessed = int(input('Guess a number'))
-    while low < number_guessed < high:
-        if number_guessed < lower:
-            print('number is higher, guess again')
-        elif number_guessed > higher:
-            print('number is lower, guess again')
-        else low < number_guessed or number_guessed < high
+    number_guessed = None   
+    number_guessed = int(input('Guess a number '))
+    while not (low < number_guessed < high):
+        if number_guessed < low:
+            print('number is higher')
+        elif number_guessed > high:
+            print('number is lower')
+        elif number_guessed > low and number_guessed < high:
             print('You guessed it right!')
+            return number_guessed
+        number_guessed = int(input('Guess again '))
     return number_guessed
 
 
