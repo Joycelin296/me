@@ -18,7 +18,6 @@ def loop_ranger(start, stop=None, step=1):
         print(x)
         the_numbers.append(x)
         x = x + step
-
     return the_numbers
 
 
@@ -47,8 +46,18 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
+    number_guessed = int(input('Guess a number'))
+    while low < number_guessed < high:
+        if number_guessed < lower:
+            print('number is higher, guess again')
+        elif number_guessed > higher:
+            print('number is lower, guess again')
+        else low < number_guessed or number_guessed < high
+            print('You guessed it right!')
+    return number_guessed
+
+
     
-    return None
 
 
 def not_number_rejector(message):
