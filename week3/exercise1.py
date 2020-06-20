@@ -90,8 +90,9 @@ def super_asker(low, high):
     print('Guess what I am thinking of: ')
     while guesses < 50:
         guess = int(input('Take a guess:'))
-        if not guess.isdigit():
+        while not guess.isdigit():
             print('I am thinking of a number, guess again: ')
+        return guess
         if guess.isdigit() < number:
             print('The number I am thinking of is higher, guess again: ')
         if guess.isdigit() > number:
