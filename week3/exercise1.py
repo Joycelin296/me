@@ -46,22 +46,22 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    number_guessed = None   
-    number_guessed = int(input('Guess a number '))
-    while not (low < number_guessed < high):
-        if number_guessed < low:
-            print('number is higher')
-        elif number_guessed > high:
-            print('number is lower')
-        elif number_guessed > low and number_guessed < high:
-            print('You guessed it right!')
-            return number_guessed
-        number_guessed = int(input('Guess again '))
-    return number_guessed
-
-
-    
-
+    import random
+    number = random.randint(1, 50)
+    guesses = 0
+    print('Guess a number between 1-50: ')
+    while guesses < 50:
+        guess = int(input('Take a guess: '))
+        if guess < number:
+            print('The number is higher.')
+        if guess > number:
+            print('The number is lower.')
+        if guess == number:
+            break
+    if guess == number:
+        guesses = str(guesses)
+        print('You got the number!')
+    return guesses
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
@@ -70,7 +70,10 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    number = input('Enter a number: ')
+    while not number.isdigit():
+        number = input('Input is not valid. Please enter a number: ')
+    return number
 
 
 def super_asker(low, high):
@@ -81,7 +84,26 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    import random
+    number = random.randint(1, 50)
+    guesses = 0
+    print('Guess what I am thinking of: ')
+    while guesses < 50:
+        guess = int(input('Take a guess:'))
+        if not guess.isdigit():
+            print('I am thinking of a number, guess again: ')
+        if guess.isdigit() < number:
+            print('The number I am thinking of is higher, guess again: ')
+        if guess.isdigit() > number:
+            print('The number I am thinking of is lower, guess again: ')
+        if guess == number:
+            break
+    if guess == number:
+        guesses = str(guesses)
+        print('You got it')
+    return guesses
+
+            
 
 
 if __name__ == "__main__":
