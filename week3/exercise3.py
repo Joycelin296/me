@@ -60,7 +60,7 @@ def advancedGuessingGame():
         if guessedNumber > upperBound or guessedNumber < lowerBound:
           print('Your number is outside the given range.')
       except:
-          print('Please guess an actual number!')
+          print('Please enter a integer.')
     return 'You got it!'
 
 if __name__ == "__main__":
