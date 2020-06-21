@@ -60,7 +60,7 @@ def stubborn_asker(low, high):
     number = random.randint(low, high)
     guesses = 0
     print('Guess a number between 1-50: ')
-    while guesses < 50:
+    while guesses < 1:
         guess = int(input('Take a guess: '))
         if guess < number:
             print('The number is higher.')
