@@ -26,7 +26,7 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return range(start, stop, step)
+    return range(start , stop, step)
 
 
 def two_step_ranger(start, stop):
@@ -98,13 +98,9 @@ def super_asker(low, high):
             if guess == number:
                 print('You are right!')
                 guesses = True
-        except:
+        except ValueError:
             print('Please enter an integer: ')
-        break
-    if guess == number:
-        guesses = str(guesses)
-        print('You got the number!')
-    return guesses
+    return 'You got it!'
 
             
 

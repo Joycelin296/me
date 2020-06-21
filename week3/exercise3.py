@@ -33,9 +33,11 @@ def advancedGuessingGame():
     lowerBound = input('Enter a lower bound: ')
     while not lowerBound.isdigit():
       lowerBound = input('Please enter an integer: ')
+      break
     upperBound = input("Enter an upper bound: ")
     while not upperBound.isdigit():
       upperBound = input('Please enter an integer: ')
+      break
     print("OK then, a number between {}".format(lowerBound)), print("and {}".format(upperBound))
     lowerBound = int(lowerBound)
     upperBound = int(upperBound)
