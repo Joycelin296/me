@@ -86,22 +86,24 @@ def super_asker(low, high):
     """
     import random
     number = random.randint(1, 50)
-    guesses = 0
-    print('Guess what I am thinking of: ')
-    while guesses < 50:
-        guess = int(input('Take a guess:'))
-        while not guess.isdigit():
-            print('I am thinking of a number, guess again: ')
-        return guess
-        if guess.isdigit() < number:
-            print('The number I am thinking of is higher, guess again: ')
-        if guess.isdigit() > number:
-            print('The number I am thinking of is lower, guess again: ')
-        if guess == number:
-            break
+    guesses = False
+    print('Guess a number between 1-50: ')
+    while not guesses:
+        try:
+            guess = int(input('Take a guess: '))
+            if guess < number:
+                print('The number is higher.')
+            if guess > number:
+                print('The number is lower.')
+            if guess == number:
+                print('You are right!')
+                guesses = True
+        except:
+            print('Please enter an integer: ')
+        break
     if guess == number:
         guesses = str(guesses)
-        print('You got it')
+        print('You got the number!')
     return guesses
 
             

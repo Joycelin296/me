@@ -49,7 +49,7 @@ def advancedGuessingGame():
         guessedNumber = int(input("Guess a number: "))
         print("You guessed {},".format(guessedNumber),)
         if guessedNumber == actualNumber:
-            print("You got it!! It was {}".format(actualNumber))
+            print("It was {}".format(actualNumber))
             guessed = True
         if guessedNumber < actualNumber:
             print("Too small, try again :'(")
