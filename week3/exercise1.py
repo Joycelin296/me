@@ -95,9 +95,9 @@ def super_asker(low, high):
     amount of code.
     """
     import random
-    number = random.randint(1, 50)
+    number = random.randint(low, high)
     guesses = False
-    print('Guess a number between 1-50: ')
+    print('Guess a number:')
     while not guesses:
         try:
             guess = int(input('Take a guess: '))
