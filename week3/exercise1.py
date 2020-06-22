@@ -26,13 +26,11 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    numbers = []
-    a = start
-    while start < stop:
-        numbers.append(start)
-        a = a + stop
-    return numbers
 
+    numbers = []
+    for a in range(start < stop):
+        numbers.append(step)
+    return numbers
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -59,7 +57,7 @@ def stubborn_asker(low, high):
     import random
     number = random.randint(low, high)
     guesses = 0
-    print('Guess a number between 1-50: ')
+    print('Guess a number: ')
     while guesses < 1:
         guess = int(input('Take a guess: '))
         if guess < number:
@@ -82,7 +80,7 @@ def not_number_rejector(message):
     """
     number = input('Enter a number: ')
     while not number.isdigit():
-        number = input('Input is not valid. Please enter a number: ')
+        number = input(message)
     return number
 
 
