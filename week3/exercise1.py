@@ -28,7 +28,8 @@ def lone_ranger(start, stop, step):
     """
 
     numbers = []
-    for a in range(start < stop):
+    i = start
+    for i in range(start < stop):
         numbers.append(step)
     return numbers
 
@@ -95,7 +96,7 @@ def super_asker(low, high):
     import random
     number = random.randint(low, high)
     guesses = False
-    print('Guess a number:')
+    print('I am thinking of a number.')
     while not guesses:
         try:
             guess = int(input('Take a guess: '))
