@@ -58,18 +58,19 @@ def stubborn_asker(low, high):
     import random
     number = random.randint(low, high)
     guesses = 0
-    print('Guess a number: ')
     while guesses < 1:
-        guess = int(input('Take a guess: '))
-        if guess < number:
-            print('The number is higher.')
-        if guess > number:
-            print('The number is lower.')
-        if guess == number:
-            break
-    if guess == number:
-        guesses = str(guesses)
-        print('You got the number!')
+        try:
+            guess = int(input('Guess a number: '))
+            if guess < number:
+                print('The number is higher.')
+            if guess > number:
+                print('The number is lower.')
+            if guess == number:
+                break
+        except:
+            guess == number:
+            guesses = str(guesses)
+            print('You got the number!')
     return guesses
 
 def not_number_rejector(message):
