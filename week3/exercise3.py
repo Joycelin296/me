@@ -30,16 +30,23 @@ def advancedGuessingGame():
 
     print("\nWelcome to the guessing game!")
     print("A number between _ and _ ?")
-    lowerBound = input('Enter a lower bound: ')
-    while not lowerBound.isdigit():
-      lowerBound = input('Please enter an integer: ')
-      break
-    upperBound = input("Enter an upper bound: ")
-    while not upperBound.isdigit():
-      upperBound = input('Please enter an integer: ')
-      break
-    print("OK then, a number between {}".format(lowerBound)), print("and {}".format(upperBound))
+    
+    while True:
+      lowerBound = input('Enter a lower bound: ')
+      if type(lowerBound) != int:
+        print('Please enter an integer')
+      else:
+        break
+    while True:
+      upperBound = input('Enter a upper bound: ')
+      if type(upperBound) != int:
+        print('Please enter an integer')
+      else:
+        break
+
+    print("OK then, a number between {}".format(lowerBound))
     lowerBound = int(lowerBound)
+    print("and {}".format(upperBound))
     upperBound = int(upperBound)
 
     actualNumber = random.randint(lowerBound, upperBound)

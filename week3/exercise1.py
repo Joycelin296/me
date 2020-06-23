@@ -28,9 +28,9 @@ def lone_ranger(start, stop, step):
     """
 
     numbers = []
-    i = start
-    for i in range(start < stop):
-        numbers.append(step)
+    while start < stop:
+        numbers.append(start)
+        start = start + step
     return numbers
 
 def two_step_ranger(start, stop):
@@ -54,24 +54,55 @@ def stubborn_asker(low, high):
     until you get a number that you think is OK
 
     Look up the docs for input
-    """
+    
+    import random
+
+    number_guessed = random.randint(low, high)
+    number = random.randint(low, high)
+    guesses = 1
+
+    while guesses == 1:
+        if number_guessed > number:
+            print('The number is higher')
+            number = number + 1
+        if number < number_guessed:
+            print('The number is lower')
+            number = number - 1
+        if number_guessed == number:
+            print('You got it!')
+            return number
+
     import random
     number = random.randint(low, high)
-    guesses = 0
-    while guesses < 1:
-        try:
-            guess = int(input('Guess a number: '))
-            if guess < number:
-                print('The number is higher.')
-            if guess > number:
-                print('The number is lower.')
-            if guess == number:
-                break
-        except:
-            guess == number:
-            guesses = str(guesses)
+    guess = random.randint(low,high)
+    guesses = False
+    while not guesses:
+        guess = int(input('Guess a number: '))
+        if guess < number:
+            print('The number is higher.')
+            number = number - 1
+        if guess > number:
+            print('The number is lower.')
+            number = number + 1
+        if guesses == number:
             print('You got the number!')
-    return guesses
+            guesses = True
+    return guess
+    """
+    import random
+
+    random_number = random.randint(low, high)
+    guess = 1
+    while guess == 1:
+        number = input('Guess a number: ')
+        if number < high and number > low:
+            return number
+            guess = 0
+
+
+
+    
+
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
@@ -79,11 +110,22 @@ def not_number_rejector(message):
     Ask for a number, and if the response is actually NOT a number 
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
+   
+    while True:
+        number = input('Enter a number: ')
+        try:
+            number = int(number)
+            break
+        except ValueError:
+            continue
+    return number 
     """
-    number = input('Enter a number: ')
-    while not number.isdigit():
-        number = input(message)
-    return number
+    thing = input("Enter a number: ")
+    while not thing.isdigit():
+        thing = input(message)
+        return thing
+
+    return thing
 
 
 def super_asker(low, high):
@@ -93,7 +135,7 @@ def super_asker(low, high):
     to make a function that does it all!
     Try to call at least one of the other functions to minimise the
     amount of code.
-    """
+    
     import random
     number = random.randint(low, high)
     guesses = False
@@ -111,7 +153,20 @@ def super_asker(low, high):
         except ValueError:
             print('Please enter an integer: ')
     return 'You got it!'
+    """
+    import random
 
+    random_numbers = random.randint(low, high)
+    guess = 1
+    while guess == 1:
+        try:
+            number = input('Guess a number: ')
+            if number < high and number > low:
+                guess = 0
+        except ValueError:
+            print('Please enter an integer: ')
+    return number
+        
             
 
 
